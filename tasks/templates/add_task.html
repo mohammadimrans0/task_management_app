@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Add Task{% endblock title %}
+
+{% block content %}
+<h1 class="text-center my-5">Add Task</h1>
+
+<form action="" method="post" class="w-50 mx-auto mb-5">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-primary mt-3">Submit</button>
+</form>
+
+{% endblock content %}
